@@ -2,22 +2,17 @@
 
 A simple Ruby Gem to bootstrap dependencies for setting up and maintaining a local Jekyll environment in sync with GitHub Pages.
 
-[![Gem Version](https://img.shields.io/gem/v/github-pages.svg)](https://rubygems.org/gems/github-pages)
-[![Build Status](https://img.shields.io/travis/github/pages-gem/master.svg)](https://travis-ci.org/github/pages-gem)
+*Note: I forked this from [github/pages-gem](https://github.com/github/pages-gem) for Jekyll 3.0.0 support and I also removed `jemoji` from plugin list because of it's `http-pipeline`'s dependency.
 
 ## Usage
 
-Run the following command:
-
-```
-gem install github-pages
-```
-
-Alternatively, you can add the following to your project's Gemfile:
+Add the following to your Jekyll's Gemfile:
 
 ```ruby
-gem 'github-pages'
+gem 'github-pages', github: 'irfanfadilah/pages-gem'
 ```
+
+Don't forget to add gems: `jekyll-paginate` and remove `jemoji` (if any) in your Jekyll's `_config.yml`.
 
 *Note: You are not required to install Jekyll separately. Once the `github-pages` gem is installed, you can build your site using `jekyll build`, or preview your site using `jekyll serve`.* For more information about installing Jekyll locally, please see [the GitHub Help docs on the matter](https://help.github.com/articles/using-jekyll-with-pages#installing-jekyll).
 
